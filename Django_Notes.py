@@ -7,3 +7,4 @@
 
 
 #views connect models and templates so that our posts appear in our HTML template
+# {% %} is notation for Django template tags
