@@ -1,3 +1,5 @@
+/* static files don't depend on request context and are the same for every user */
+
 .page-header {
     background-color: #C25100;
     margin-top: 0;

@@ -1,3 +1,6 @@
+#this file helps the management of the site and will start a web server locally without installing anything else
+# command for starting the server in the venv: python manage.py runserver
+
 #!/usr/bin/env python
 """Django's command-line utility for administrative tasks."""
 import os

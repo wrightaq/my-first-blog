@@ -1,4 +1,5 @@
-{% load static %}
+{# create a base.html file to implement template extending #}
+{% load static %} {# loads all css at the base level of the HTML setup #}
 <!DOCTYPE html>
 <html>
     <head>
@@ -10,9 +11,12 @@
     <body>
         <header class="page-header">
           <div class="container">
-              {% if user.is_authenticated %}
+              {% if user.is_authenticated %} {# only allows admin users #}
                   <a href="{% url 'post_new' %}" class="top-menu">
-                      {% include './icons/file-earmark-plus.svg' %}
+                      {% include './icons/file-earmark-plus.svg' %} {# 'include' is a Django template directive to inject the files content into the template #}
+                  </a>
+                  <a href="{% url 'post_draft_list' %}" class="top-menu">
+                    {% include './icons/pencil-square.svg'%}
                   </a>
               {% endif %}
                   <h1><a href="/">Django Girls Blog</a></h1>
@@ -21,7 +25,7 @@
         <main class="container">
             <div class="row">
                 <div class="col">
-                {% block content %}
+                {% block content %} {# a block created to create space for the extended html files #}
                 {% endblock %}
                 </div>
             </div>

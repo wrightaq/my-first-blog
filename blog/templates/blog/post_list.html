@@ -1,12 +1,14 @@
+{# loops through the published posts to display them on the page #}
+
 {% extends 'blog/base.html' %}
 
 {% block content %}
-    {% for post in posts %}
+    {% for post in posts %} {# the posts variable is received from the post_list view and double curly brackets allow it to be inserted in the HTML #}
         <article class="post">
             <time class="date">
                 {{ post.published_date }}
             </time>
-            <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
+            <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2> {# Django template tags used to notate a url that will be passed, its name, and its primary key #}
             <p>{{ post.text|linebreaksbr }}</p>
         </article>
     {% endfor %}

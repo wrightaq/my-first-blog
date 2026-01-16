@@ -1,3 +1,6 @@
+#contains timezone information (used for publishing posts), language settings, path for static files (CSS),
+#hosts for serving locally and deploying, establishing database
+
 """
 Django settings for mysite project.
 
