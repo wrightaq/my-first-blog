@@ -11,14 +11,14 @@
     <body>
         <header class="page-header">
           <div class="container">
-              {% if user.is_authenticated %} {# only allows admin users #}
+              {#{% if user.is_authenticated %} {# only allows admin users #}#}
                   <a href="{% url 'post_new' %}" class="top-menu">
                       {% include './icons/file-earmark-plus.svg' %} {# 'include' is a Django template directive to inject the files content into the template #}
                   </a>
                   <a href="{% url 'post_draft_list' %}" class="top-menu">
                     {% include './icons/pencil-square.svg'%}
                   </a>
-              {% endif %}
+              {#{% endif %}#}
                   <h1><a href="/">Django Girls Blog</a></h1>
           </div>
         </header>
